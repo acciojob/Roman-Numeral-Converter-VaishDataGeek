@@ -12,7 +12,9 @@ function convertToRoman(num) {
   //your code here
 	let result = "";
 
-  for (let [symbol, value] of obj) {
+	const romanList = Object.values(obj);
+
+  for (let [symbol, value] of romanList) {
     while (num >= value) {
       result += symbol;
       num -= value;
